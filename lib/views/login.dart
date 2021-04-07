@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:metro/views/SignUp.dart';
 
 class login extends StatefulWidget {
   @override
@@ -132,7 +133,12 @@ class _loginState extends State<login> {
                         child: Row(
                             children:[
                               Text("Don't have an account? ",style: TextStyle(fontStyle: FontStyle.italic , color: Colors.blueGrey,fontWeight: FontWeight.w500),),
-                              TextButton(onPressed: null, child: Text('Sign Up',style: TextStyle(color: Colors.white , fontStyle: FontStyle.italic ,fontWeight:  FontWeight.w900 ),))
+                              TextButton(
+                                  onPressed:(){
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUp()) );
+                                  } ,
+                                   child: Text('Sign Up',style: TextStyle(color: Colors.white , fontStyle: FontStyle.italic ,fontWeight:  FontWeight.w900 ),)
+                              )
                             ]
                         ),
                       )
